@@ -1,0 +1,39 @@
+<div class="container">             
+                    <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body text-center">
+                            </div>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th scope="col">ID</th>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Username</th>
+                                                <th scope="col">Email</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="customtable">
+                                        @for (item of studList; track $index) {
+                                            <tr>
+                                                <td>{{item.id}}</td>
+                                                <td>{{item.name}}</td>
+                                                <td>{{item.username}}</td>
+                                                <td>{{item.email}}</td>
+                                                <td>Street:{{item.address.street}}<br>
+                                                    Suite:{{item.address.suite}}<br>
+                                                    City:{{item.address.city}}<br>
+                                                    Zipcode:{{item.address.zipcode}}</td>
+                                            </tr>
+
+                                        }
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+                   </div> 

@@ -1,0 +1,86 @@
+<table>
+    <tr>
+        <td>
+            @if(isMessageVisible===true) {
+                <p>This is a message</p>
+                <h1>This is Paragraph</h1>
+
+            }
+            @else {
+                <span>Message is hidden</span>
+            }
+        </td>
+    </tr>
+    <tr>
+        <td>
+         <button (click)="showMessage()" class="btn btn-primary">Show Message</button>
+        </td>
+        <td>
+         <button (click)="hideMessage()">Hide Message</button>
+         </td>
+    </tr>
+    <tr>
+        <td>
+            <select>
+            @for (item of cityList; track $index) {
+          
+                <option value="">{{item}}</option>
+            }
+            </select>
+        </td>
+    </tr>
+   <tr>
+    <td><input type="text" [(ngModel)]="startMonthName"></td>
+    <td>
+        @if(startMonthName=="jan"){
+            <p>January is the first month of the year</p>
+        }@else if (startMonthName=="feb") {
+            <p>February is the second month of the year</p>
+        }@else if (startMonthName=="mar") {
+            <p>March is the third month of the year</p>
+        }@else if (startMonthName=="apr") {
+            <p>April is the fourth month of the year</p>
+        }@else if (startMonthName=="may") {
+            <p>May is the fifth month of the year</p>
+        }@else if (startMonthName=="jun") {
+            <p>June is the sixth month of the year</p>
+        }@else if (startMonthName=="jul") {
+            <p>July is the seventh month of the year</p>
+        }@else if (startMonthName=="aug") {
+            <p>August is the eighth month of the year</p>
+        }@else if (startMonthName=="sep") {
+            <p>September is the ninth month of the year</p>
+        }@else if (startMonthName=="oct") {
+            <p>October is the tenth month of the year</p>
+        }@else if (startMonthName=="nov") {
+            <p>November is the eleventh month of the year</p>
+        }@else if (startMonthName=="dec") {
+            <p>December is the twelfth month of the year</p>
+        }@else {
+            <p>Invalid month</p>
+        }
+    </td>
+   </tr>
+</table>
+<table>
+<thead>
+    <tr>
+        <td>Sr. No</td>
+        <td>Name</td>
+        <td>Age</td>
+        <td>City</td>
+    </tr>
+</thead>
+<tbody>
+  
+    @for (item of studList; track $index) {
+         <tr>
+            <td>{{$index+1}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.age}}</td>
+            <td>{{item.city}}</td>
+          </tr>  
+ }
+    
+</tbody>
+</table>

@@ -1,0 +1,46 @@
+<table>
+    <tr>
+        <td>
+            <h1>Data Binding</h1>
+            <p>Data binding is a powerful feature in Angular that allows you to synchronize data between the model and the view.</p>
+            <p>In Angular, data binding can be achieved using various techniques such as interpolation, property binding, event binding, and two-way binding.</p>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            {{courseName}}<br>
+            {{courseDuration}}<br>
+            {{coursePrice}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" value="{{courseName}}" />
+        </td>
+        <td>
+            <input [type]="inputType" value="{{courseDuration}}" />
+        </td>
+        <td [class]="myClassName">{{courseName}}</td>
+        <td>
+            <button (click)="showCourseName()">Show Course Name</button>
+            
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button (click)="changeCourseName()">Change Course Name</button>
+        </td>
+        <td>
+            <select (change)="onCityChange()">
+                <option value="">Goa</option>
+                <option value="">Gujrat</option>
+                <option value="">Pune</option> 
+                <option value="">Maharastra</option>
+
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><input type="text" [(ngModel)]="courseName"></td>
+    </tr>
+</table>
