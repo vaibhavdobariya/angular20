@@ -43,7 +43,7 @@ export class User implements OnInit {
   }
   onEdit(item:any){
     this.userObj=item
-  }
+  } 
   onUpdate(){
     this.http.put("https://localhost:7250/api/Users/"+this.userObj.userId,this.userObj).subscribe({
       next:()=>{

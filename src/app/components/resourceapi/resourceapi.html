@@ -1,0 +1,22 @@
+<table class="border table-bordered">
+
+    @for (item of userList.value(); track $index) {
+    <tr>
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.address.street}} {{item.address.suite}} ,{{item.address.city}}</td>
+    </tr>
+    }
+   
+</table>
+<div class="row">
+    <div class="col-6">
+        <h1>Loading Status : {{userList.isLoading()}}</h1><br>
+    </div>
+    <div class="col-6">
+    <button class="btn btn-dark" (click)="reLoad()">Reload</button>
+
+    </div>
+
+</div>

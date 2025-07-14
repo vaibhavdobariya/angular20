@@ -6,6 +6,9 @@ import { ControlFlow } from './components/control-flow/control-flow';
 import { SignalEx } from './components/signal-ex/signal-ex';
 import { AttDirective } from './components/att-directive/att-directive';
 import { Getapi } from './components/getapi/getapi';
+import { Reactiveform } from './components/reactiveform/reactiveform';
+import { Resourceapi } from './components/resourceapi/resourceapi';
+import { Carservice } from './components/carservice/carservice';
 
 export const routes: Routes = [
     {
@@ -35,5 +38,17 @@ export const routes: Routes = [
     {
         path:'getapi',
         component:Getapi
+    },
+    {
+        path: 'reactiveform',
+        component:Reactiveform
+    },
+    {
+        path: 'resourceapi',
+        component:Resourceapi
+    },
+    {
+        path: 'carservice',
+        component:Carservice
     }
 ];

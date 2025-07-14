@@ -22,13 +22,13 @@
         </td>
         <td [class]="myClassName">{{courseName}}</td>
         <td>
-            <button (click)="showCourseName()">Show Course Name</button>
+            <button class="btn btn-dark" (click)="showCourseName()">Show Course Name</button>
             
         </td>
     </tr>
     <tr>
         <td>
-            <button (click)="changeCourseName()">Change Course Name</button>
+            <button class="btn btn-warning" (click)="changeCourseName()">Change Course Name</button>
         </td>
         <td>
             <select (change)="onCityChange()">

@@ -1,38 +1,25 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="admin">Admin</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="databinding">databinding</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="control-flow">control flow</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="signal-ex">Signal</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="att-directive">att-directive</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" routerLink="user">user api</a>
-        </li>
-            <li class="nav-item">
-          <a class="nav-link" routerLink="getapi">GET api</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<router-outlet></router-outlet>
+<!-- Add inside your .sidebar div, at the top -->
+
+
+<div class="app-container">
+  <div class="sidebar">
+    <div class="logo-container">
+  <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="Angular" class="logo-animated" />
+</div>
+  <a class="active" routerLink="admin">Admin</a>
+  <a routerLink="databinding">Data Binding</a>
+  <a routerLink="control-flow">Control Flow</a>
+  <a routerLink="signal-ex">Signal</a>
+  <a routerLink="att-directive">Attribute Directive</a>
+  <a routerLink="user">User API</a>
+  <a routerLink="getapi">GET API</a>
+  <a routerLink="reactiveform">Reactive Form</a>
+  <a routerLink="resourceapi">Resource API</a>
+  <a routerLink="carservice">Car Service</a>
+  <a class="disabled" aria-disabled="true">Disabled</a>
+</div>
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
+</div>

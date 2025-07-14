@@ -1,0 +1,128 @@
+<div class="row">
+    <div class="col-5">
+        <app-progressbar></app-progressbar>
+    </div>
+</div>
+<div class="row">
+    <div class="col-9">
+        <div class="card">
+            <div class="card-header bg-primary">
+                <h5 class="card-title text-white">User API</h5>
+
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">Car Id</th>
+                            <th scope="col">Brand</th>
+                            <th scope="col">Model</th>
+                            <th scope="col">Year</th>
+                            <th scope="col">Color</th>
+                            <th scope="col">DailyRate</th>
+                            <th scope="col">CarImage</th>
+                            <th scope="col">RegNo</th>
+                        </tr>
+                    </thead>
+                    <tbody class="customtable">
+                        @for (item of carList; track $index) {
+                        <tr>
+                            <td>{{item.carId}}</td>
+                            <td>{{item.brand}}</td>
+                            <td>{{item.model}}</td>
+                            <td>{{item.year}}</td>
+                            <td>{{item.color}}</td>
+                            <td>{{item.dailyRate}}</td>
+                            <td>{{item.carImage}}</td>
+                            <td>{{item.regNo}}</td>
+                            <td><button class="btn btn-primary" (click)="onEdit(item)">Edit</button></td>
+                            <td><button class="btn btn-danger" (click)="onDelete(item)">Delete</button></td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header bg-primary">
+                <h5 class="card-title text-white">User API</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+
+                    <div class="col-12">
+                        <label for="brand">brand</label>
+                        <input type="text" class="form-control" [(ngModel)]="carObj.brand">
+                    </div>
+                    <div class="col-12">
+                        <label for="model">Model</label>
+                        <input type="text" class="form-control" [(ngModel)]="carObj.model">
+                    </div>
+                    <div class="col-12">
+                        <label for="year">Year</label>
+                        <input type="text" class="form-control" [(ngModel)]="carObj.year">
+                    </div>
+                    <div class="col-12">
+                        <label for="color">Color</label>
+                        <input type="text" class="form-control" [(ngModel)]="carObj.color">
+                    </div>
+                    <div class="col-12">
+                        <label for="dailyRate">Daily Rate</label>
+                        <input type="text" class="form-control" [(ngModel)]="carObj.dailyRate">
+                    </div>
+                    <div class="col-12">
+                        <label for="carImage">Car Image</label>
+                        <input type="text" class="form-control" [(ngModel)]="carObj.carImage">
+                    </div>
+                    <div class="col-12">
+                        <label for="regNo">Reg No</label>
+                        <input type="text" class="form-control" [(ngModel)]="carObj.regNo">
+                    </div>
+                    <div class="row m-3">
+                        <div class="col-6">
+                            <button class="btn btn-primary">Reset</button>
+                        </div>
+                        <div class="col-6">
+                            @if(carObj.carId==0) {
+                            <button class="btn btn-success" (click)="onSave()">Save</button>
+                            }@else{
+                            <button class="btn btn-success" (click)="onUpdate()">Update</button>
+
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container mt-5">
+        <h3 class="text-center mb-4">Student Attendance</h3>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover shadow">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Attendance (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (item of studObj; track $index) {
+                    <tr>
+                        <td>{{ item.studId }}</td>
+                        <td>{{ item.name }}</td>
+                        <td>{{item.age}}</td>
+                        <td><app-progressbar [progessValue]="item.attendence"></app-progressbar></td>
+                    </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
